@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{%block content%}
+
+{% if movies%}
+    {% for movie in movies%}
+        <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-3">
+                <div class="col-md-3">
+                    <img class="card-img" src="{% static 'img/1.jpg'%}" alt="eklemedim fotoları">
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        </div>
+        
+    {%endfor%}
+{%else %}
+    <div class="alert alert-warning">couldn't find any movies</div>
+{%endif%}
+{% endblock %}

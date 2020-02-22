@@ -1,0 +1,12 @@
+{% extends 'layout.html'%}
+{%load static%}
+
+{%block content%}
+
+{% if movies%}
+    {% for movie in movies%}
+        furkan
+    {%endfor%}
+{%else %}
+    <div class="alert alert-warning">couldn't find any movies</div>
+{%endif%}
